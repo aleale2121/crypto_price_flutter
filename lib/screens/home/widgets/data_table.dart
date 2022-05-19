@@ -12,19 +12,28 @@ class CustomeDataTable extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Table(
-        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
-        border: TableBorder(
-          horizontalInside: BorderSide(
-            width: 1,
-            color: Colors.grey.shade400,
-            style: BorderStyle.solid,
-          ),
-        ),
-        children: _createRows(),
-      ),
-    );
+    return dataList.isEmpty
+        ? const Center(
+            child: Text(
+              "No results found",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          )
+        : SingleChildScrollView(
+            child: Table(
+              defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+              border: TableBorder(
+                horizontalInside: BorderSide(
+                  width: 1,
+                  color: Colors.grey.shade400,
+                  style: BorderStyle.solid,
+                ),
+              ),
+              children: _createRows(),
+            ),
+          );
   }
 
   List<TableRow> _createRows() {
