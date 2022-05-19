@@ -18,6 +18,7 @@ class TableBody extends StatelessWidget {
       flex: 3,
       child: Consumer<CryptoPriceProvider>(builder: (context, provider, _) {
         return TabBarView(
+          physics: const ScrollPhysics(),
           controller: _tabController,
           children: [
             CustomeDataTable(
