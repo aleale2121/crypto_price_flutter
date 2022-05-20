@@ -18,7 +18,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     _tabController = TabController(
       vsync: this,
       length: 3,
-      animationDuration: const Duration(seconds: 2)
+      animationDuration: const Duration(milliseconds: 1200)
     );
     SchedulerBinding.instance?.addPostFrameCallback((_) {});
     _tabController.addListener(() => _handleTabSelection(context));

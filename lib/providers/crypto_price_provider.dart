@@ -107,8 +107,8 @@ class CryptoPriceProvider extends ChangeNotifier {
     String cryptoType,
   ) {
     if (cryptoTypeFilters.contains(cryptoType)) {
-      filterdCryptoPrices.sort((a, b) => a.volume.compareTo(b.volume));
-      filterdCryptoPrices = filterdCryptoPrices.reversed.toList();
+      filterdCryptoPrices.sort((a, b) => b.volume.compareTo(a.volume));
+      // filterdCryptoPrices = filterdCryptoPrices.reversed.toList();
     } else {
       filterdCryptoPrices.sort((a, b) {
         return a.base.compareTo(b.base);
