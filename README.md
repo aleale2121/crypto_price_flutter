@@ -1,7 +1,3 @@
 # woo_flutter_test
 
-This Project is a Flutter test project for WOO Flutter Developer Position.
-
-Done by :-
-Alefew Yimer
-alefewdev21@gmail.com
+This Project is a Simple crypto price app using provider.
